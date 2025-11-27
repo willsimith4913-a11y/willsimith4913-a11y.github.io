@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+    <head>
+        <title>大纲</title>
+        <meta charset='utf-8'/>
+        <style>
+ .ͼ1.cm-focused {outline: 1px dotted #212121;}
+.ͼ1 {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0; overflow-anchor: none;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; min-height: 100%; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {position: absolute; left: 0; top: 0; contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused > .cm-scroller > .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #ddd;}
+.ͼ1 .cm-dropCursor {position: absolute;}
+.ͼ1.cm-focused > .cm-scroller > .cm-cursorLayer .cm-cursor {display: block;}
+.ͼ1 .cm-iso {unicode-bidi: isolate;}
+.ͼ1 .cm-announced {position: fixed; top: -10000px;}
+@media print {.ͼ1 .cm-announced {display: none;}}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; z-index: 200;}
+.ͼ1 .cm-gutters-before {inset-inline-start: 0;}
+.ͼ1 .cm-gutters-after {inset-inline-end: 0;}
+.ͼ2 .cm-gutters.cm-gutters-before {border-right-width: 1px;}
+.ͼ2 .cm-gutters.cm-gutters-after {border-left-width: 1px;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border: 0px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0; z-index: 300;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-dialog label {font-size: 80%;}
+.ͼ1 .cm-dialog {padding: 2px 19px 4px 6px; position: relative;}
+.ͼ1 .cm-dialog-close {position: absolute; top: 3px; right: 4px; background-color: inherit; border: none; font: inherit; font-size: 14px; padding: 0;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top; user-select: none;}
+.ͼ1 .cm-highlightSpace {background-image: radial-gradient(circle at 50% 55%, #aaa 20%, transparent 5%); background-position: center;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+ /*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+*/
+
+/* Reapplies Mui styles that get overriden by Obsidian styles */
+.modal-content input[type=checkbox] {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 1;
+}
+
+.MuiCheckbox-root .MuiSvgIcon-root {
+  color: var(--text-faint)
+} 
+.pandoc-plugin-error {
+    color: red;
+}
+  undefined
+</style>
+    </head>
+    <body>
+<ul>
+<li dir="auto"><a href="G:\006个人笔记\obsidian\obsidian\03-工作\小说大纲\github-publish\outline\合成爱人\index.html#%E5%B0%8F%E8%AF%B4\%E5%90%88%E6%88%90%E7%88%B1%E4%BA%BA\%E5%A4%A7%E7%BA%B2.html" class="tag" target="_blank" rel="noopener nofollow">#小说/合成爱人/大纲</a></li>
+<li dir="auto"><a href="G:\006个人笔记\obsidian\obsidian\03-工作\小说大纲\github-publish\outline\合成爱人\index.html#%E5%B0%8F%E8%AF%B4\%E8%BF%9B%E8%A1%8C%E4%B8%AD.html" class="tag" target="_blank" rel="noopener nofollow">#小说/进行中</a></li>
+<li dir="auto">
+<h2 data-heading="五句话大纲" dir="auto">五句话大纲</h2>
+<ul>
+<li dir="auto">顾沉叙喜欢自己的室友，使用了小广告上的方式，寄出自己的精液，控制室友岳承宇。</li>
+<li dir="auto">室友岳承宇果然忽然爱上了自己，但顾沉叙却忽然发现了室友其实一直被公司控制，靠近他只是有其他目的。</li>
+<li dir="auto">于是他经过努力找到了干扰室友行为的方式。但也收到了公司方面的法律、人身威胁，于是顾沉叙决定和岳承宇一起逃跑。半路上遇到了另一个和成人，戈瀚骁。为了威胁顾沉叙，戈瀚骁在跟自己主人做爱的时候被公司忽然控制，夺走了主人的性命。同时把顾沉叙的岳承宇带回公司。</li>
+<li dir="auto">顾沉叙原本打算一走了之，但想到自己和室友之间的感情，还是把重新被上架销售的岳承宇买回来了，果然自己之前发现的和成人漏洞还是在的。</li>
+<li dir="auto">重新找回自己真爱的顾沉叙刚感觉生活回到正轨，却发现公司居然连同政府开始通缉他，关键时候有人出马救下两人，与此同时顾沉叙发现自己的爱人，始终只是个和成人，他所谓的自由意志，其实也只是顾沉叙的扰乱程序发生错误造成的。</li>
+</ul>
+</li>
+<li dir="auto">
+<h2 data-heading="相关人物设定" dir="auto">相关人物设定</h2>
+<ul>
+<li dir="auto">男主：<a data-href="顾沉叙" href="G:\006个人笔记\obsidian\obsidian\03-工作\小说大纲\github-publish\outline\合成爱人\%E9%A1%BE%E6%B2%89%E5%8F%99.html" class="internal-link" target="_blank" rel="noopener nofollow">顾沉叙</a></li>
+<li dir="auto">男二，室友：<a data-href="岳承宇" href="G:\006个人笔记\obsidian\obsidian\03-工作\小说大纲\github-publish\outline\合成爱人\%E5%B2%B3%E6%89%BF%E5%AE%87.html" class="internal-link" target="_blank" rel="noopener nofollow">岳承宇</a></li>
+<li dir="auto">男三，另一个被公司控制的人：<a data-href="戈瀚骁" href="G:\006个人笔记\obsidian\obsidian\03-工作\小说大纲\github-publish\outline\合成爱人\%E6%88%88%E7%80%9A%E9%AA%81.html" class="internal-link" target="_blank" rel="noopener nofollow">戈瀚骁</a></li>
+<li dir="auto">反派，男一，公司负责人：<a data-href="苏寂尘" href="G:\006个人笔记\obsidian\obsidian\03-工作\小说大纲\github-publish\outline\合成爱人\%E8%8B%8F%E5%AF%82%E5%B0%98.html" class="internal-link" target="_blank" rel="noopener nofollow">苏寂尘</a></li>
+<li dir="auto">反派，男二，男主公司主要负责行动的打手<a data-href="许曜铮" href="G:\006个人笔记\obsidian\obsidian\03-工作\小说大纲\github-publish\outline\合成爱人\%E8%AE%B8%E6%9B%9C%E9%93%AE.html" class="internal-link" target="_blank" rel="noopener nofollow">许曜铮</a></li>
+</ul>
+</li>
+<li dir="auto">
+<h2 data-heading="详细情节大纲" dir="auto">详细情节大纲</h2>
+<ul>
+<li dir="auto">
+<h3 data-heading="身为芯片开发的顾沉叙看到广告联想到到自己的心动已久的室友，于是再也忍不住，决定购买对方的服务" dir="auto">身为芯片开发的顾沉叙看到广告联想到到自己的心动已久的室友，于是再也忍不住，决定购买对方的服务</h3>
+<ul>
+<li dir="auto">一天后岳承宇忽然说要搬家，两人连最后一面都没见到就分开了</li>
+<li dir="auto">再一天后顾沉叙收到了一个巨大的包裹，打开以后就是被改造为公司和成人的岳承宇
+<ul>
+<li dir="auto">包裹打开后，首先一次精液喷射礼花，想顾沉叙表示惊喜，随后全魂挂满精液的站起来</li>
+<li dir="auto">合成人岳承宇，继承了所有岳承宇的知识、记忆</li>
+<li dir="auto">合成人的使用说明（与之前一致，充电、精液存储采集）
+<ul>
+<li dir="auto">岳承宇的说明中：精液采集只是为了能拥有更大的精液储备量，在主人希望的时候随时射精。并不是真话</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">在享受了一段时间合成人室友之后，顾沉叙终于意识到问题：他爱的并不是这样的顾沉叙，而是之前那个充满活人气息地顾沉叙，甚至在他带回家的工作仪器中，从岳承宇身上检测到了奇怪的电波信号；</li>
+<li dir="auto">岳承宇除了侍奉了顾沉叙之外，还会在固定的时间离开家，去向不明。离开家的时间总是两人做爱后的第二天；顾沉叙在一次做爱后故意没让岳承宇吃自己的精液，第二天岳承宇果然没出门</li>
+</ul>
+</li>
+<li dir="auto">
+<h3 data-heading="顾沉叙了解了室友的改造限制，然后开始突破" dir="auto">顾沉叙了解了室友的改造限制，然后开始突破</h3>
+<ul>
+<li dir="auto">顾沉叙开始针对那家公司进行了解，然后假借自己肚子疼要去 医院做CT，顺道拉着岳承宇一起做了一次，美其名曰是为了他好。但却吓坏了医生，因为岳承宇没有大脑，并且在他大脑的位置发现了一个X光无法射穿的东西</li>
+<li dir="auto">顾沉叙拉着岳承宇赶紧回家，将自己工作中用来检测电波信号的设备放在岳承宇身边，经过了一个月的电波追踪，他成功记录了岳承宇所有的电波信号，然后开始逆向破解</li>
+<li dir="auto">终于在顾沉叙的干扰器影响下，岳承宇好像终于恢复了神智
+<ul>
+<li dir="auto">顾沉叙本以为岳承宇清醒后会离开自己，但没想到的是岳承宇清醒后不仅没离开，反而成了一个完美男友</li>
+<li dir="auto">两人的完美男友日常</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<h3 data-heading="顾沉叙收到了公司方面的法律警告，就在他焦虑如何是好的时候，忽然有个人联系了他" dir="auto">顾沉叙收到了公司方面的法律警告，就在他焦虑如何是好的时候，忽然有个人联系了他</h3>
+<ul>
+<li dir="auto">顾沉叙忽然收到了电话，据说是公司的法务，随后更是在自己的邮箱里发现了一封邮件，大概是说他破坏了公司的财务
+<ul>
+<li dir="auto">回头去看当时购买岳承宇的合同，才发现，自己对岳承宇只有使用权，没有归属权，也就是说岳承宇依旧有完成公司任务的责任</li>
+</ul>
+</li>
+<li dir="auto">就在顾沉叙不知所措的时候，却受到了岳承宇的支持
+<ul>
+<li dir="auto">恢复自由意志的岳承宇，也请求顾沉叙，不要把自己送回公司去改造，他只想跟顾沉叙在一起，不想被公司利用当作精液收集器</li>
+</ul>
+</li>
+<li dir="auto">两人一起就决定不理睬公司，与此同时又有一个人联系顾沉叙，温书言，一个同样购买了合成人服务的人，他偶然听公司的人提起，有个人突破了公司的限制，于是想向顾沉叙请教如何改造自己的合成人
+<ul>
+<li dir="auto">顾沉叙正好想躲开公司的追究，于是跟着温书言离开了钢芯市
+<ul>
+<li dir="auto">顾沉叙见到了被温书言控制的戈瀚骁，顾沉叙发现戈瀚骁身上的控制电波与岳承宇的完全不同，似乎是另一种控制代码发出的方式</li>
+<li dir="auto">顾沉叙经过一段研究发现了这种新的模式，经过询问才知道，戈瀚骁是公司最近的推出的合成人，功能性上与前一代一样，只是归属权是温书言，而不是使用权，所以控制方式也是经过加密的。但现在还在公司的试用期，两周后试用期满，戈瀚骁就彻底归温书言了。</li>
+<li dir="auto">经过顾沉叙的研究，戈瀚骁的破解也顺利完成，但温书言决定还是最后享受一晚上的机械男友</li>
+<li dir="auto">第二天早上，温书言被杀害，房间里多了另一个看起来非常自由灵敏的魁梧肌肉男，他表述自己是苏先生的代表，苏先生就代表公司；温书言妄图破坏公司的财务。
+<ul>
+<li dir="auto">试用期刚过，温书言试图破解产品，这是对公司利益的损害（所谓试用期的概念是假的）</li>
+<li dir="auto">顾沉叙有能力破解公司的加密技术，说明这是个人才，而苏先生爱财，所以留了他一命</li>
+<li dir="auto">同时发现岳承宇，也已经被公司的洗脑程序重新覆盖</li>
+<li dir="auto">因为顾沉叙违反用户协定，肌肉男决定代表公司收回岳承宇的使用权，同时顾沉叙必须赔偿公司1000ml的精液，交由岳承宇带走。
+<ul>
+<li dir="auto">接下来的一周，顾沉叙被监视居住，每隔一天会被岳承宇、许曜铮联手，取精一次，直到收集够1000ml，因为岳承宇之前的不稳定性，所以这次采集精液的工作是许曜铮完成的
+<ul>
+<li dir="auto">一周时间里，许曜铮的到的指令是：绝对服从顾沉叙的一切指令，但前提是顾沉叙胚核偿还1000ml高质量精液</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">而与此同时，温书言并没死，所谓的温书言死去的视频是公司给他看的作假视频，真正的温书言被跟戈瀚骁关在一起，公司对他的惩罚就是，永远为公司提供优质精液
+<ul>
+<li dir="auto">温书岩在被艹的时候像自己哥哥求饶</li>
+<li dir="auto">然后取完精 就站直不动，工作人员进来，哥哥被控制着当面把精液射到容器里面，但是上身是没反应的，哈哈哈，让弟弟绝望，哥哥不属于自己了</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<h3 data-heading="顾沉叙始终放心不下岳承宇，但同时却发现岳承宇被公司重新洗脑后再次上架销售，于是他忍痛将岳承宇买回来，通过初步测试发现自己依然可以破解岳承宇的洗脑" dir="auto">顾沉叙始终放心不下岳承宇，但同时却发现岳承宇被公司重新洗脑后再次上架销售，于是他忍痛将岳承宇买回来，通过初步测试发现自己依然可以破解岳承宇的洗脑</h3>
+<ul>
+<li dir="auto">顾沉叙重新花钱购买了岳承宇，为了防止跟温书言一样的结局，等岳承宇到手后，他先是花时间重新收集并研究了岳承宇的身体中发散出来的电波。安静等待破解的时机</li>
+<li dir="auto">等试用期到了以后，他果断解除了岳承宇的洗脑</li>
+</ul>
+</li>
+<li dir="auto">
+<h3 data-heading="顾沉叙破解洗脑之后，岳承宇明显从机器人状态回到了正常人类状态，并且从他的大脑中也找回了曾经没被洗干净的记忆，两人再次恩爱如初" dir="auto">顾沉叙破解洗脑之后，岳承宇明显从机器人状态回到了正常人类状态，并且从他的大脑中也找回了曾经没被洗干净的记忆，两人再次恩爱如初</h3>
+<ul>
+<li dir="auto">两人的恩爱日常，但顾沉叙让岳承宇清醒两次之后，终于发现了一个非常奇怪的点：
+<ul>
+<li dir="auto">岳承宇对自己的记忆、情感、表达方式，高度一致，有些被改造成合成人之前没有的特点，依旧还在
+<ul>
+<li dir="auto">岳承宇独有的机械化表达：会在特定场合说特定的话，如果顾沉叙不主动改变两人的生活轨迹（每天自然起床、吃饭、上班、运动）岳承宇会在特定时间，做特定的事，他的行为完全可以预料，好像一个看起来非常正常，但行为依旧受到固定程序控制的合成人</li>
+<li dir="auto">岳承宇的出场设定：精液采集、固定排泄废弃精液的基本功能还在</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<h3 data-heading="之前的壮汉许曜铮忽然出现，这次他要清理掉顾沉叙这个对公司来说很危险的人物" dir="auto">之前的壮汉许曜铮忽然出现，这次他要清理掉顾沉叙这个对公司来说很危险的人物</h3>
+<ul>
+<li dir="auto">之前那个杀害温书言的壮汉，再次出现，不过这次顾沉叙早就有所准备了，考虑到这个壮汉也是被控制的，于是在逃命的关键时刻他把干扰器的功率调到最大</li>
+<li dir="auto">就在他打算重新洗脑那个壮汉到时候，却迎来了意外来客</li>
+<li dir="auto">原来公司的行为已经引起了很多人的不满，那些人会营救被公司的迫害的人
+<ul>
+<li dir="auto">这些人不能被真正恢复，只能像顾沉叙一样将岳承宇恢复到现在所谓的自由
+<ul>
+<li dir="auto">这种所谓的自由是指，替换大脑后，控制心智球的核心基础指令，所有受害者的大脑都已经不在了，如果再没有心智球他们就会成为植物人，没有思想，也没有行动能力，甚至没有人类最基础的神经条件反射，所以现在的岳承宇依旧是被控制的，最终的解救也只能做到这里</li>
+</ul>
+</li>
+<li dir="auto">这些人可以i庇护顾沉叙不用被公司追杀，但要求是：他必须放弃重新洗脑许曜铮，许曜铮的心智球原本就是坚决服从公司的指令，就算清醒也是敌人；如果不让他清醒重新植入指令，就不是解放者们的初衷了。</li>
+</ul>
+</li>
+<li dir="auto">顾沉叙最终选择加入防抗公司的人接受他们的庇护，至少可以跟岳承宇一起继续幸福生活
+<ul>
+<li dir="auto">有了这些人的保护，加上顾沉叙以反抗组织的名义，将许曜铮发回到公司，并在他的心智球中插入了一条新指令，应该可以让公司明白不要伤害自己，适可而止</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto"></li>
+</ul>
+    </body>
+</html>
